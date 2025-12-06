@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Меню кофейни</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: url('https://i.pinimg.com/736x/93/b6/95/93b6951ebd2f44518ff57c0158aea63f.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #fff;
+      background-color: rgba(165, 42, 42, 0.8);
+      padding: 15px;
+      border-radius: 8px;
+    }
+    .buttons {
+      text-align: center;
+      margin: 20px 0;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+      background-color: rgba(165, 42, 42, 0.9);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #8b0000;
+    }
+    section {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: all 0.5s ease;
+      margin-top: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 15px;
+      border-radius: 8px;
+    }
+    section.active {
+      max-height: 1000px;
+      opacity: 1;
+    }
+    h2 {
+      color: #a0522d;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      width: 200px;
+      text-align: center;
+      padding: 10px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .card h3 {
+      margin: 0px 0 5px;
+      color: #4b4b4b;
+    }
+    .card p {
+      margin: 0;
+      color: #a0522d;
+      font-weight: bold;
+       line-height: 1;   /* убираем лишний интервал */
+        margin: 0;        /* убираем внешние отступы */
+        padding: 0;       /* убираем внутренние отступы */
+    }
+    .card .desc {
+      font-size: 11px;
+      color: #919090;
+      line-height: 1.4;
+    }
+    .card .volume {
+      font-size: 11px;              /* маленький размер */
+      color: rgba(100, 100, 100, 0.5); /* серый полупрозрачный */
+      margin-left: 2px;             /* отступ от названия */
+      position: relative;
+      top: -8px; /* поднимаем на 4 пикселя */
+    }
+    
+  </style>
+</head>
+<body>
+  <h1>Меню кофейни</h1>
+
+  <div class="buttons">
+    <button data-category="all">Все</button>
+    <button data-category="coffee">Классические</button>
+    <button data-category="original ">Кофе авторские</button>
+    <button data-category="cold">Холодные</button>
+    <button data-category="milky">Молочные коктейли</button>
+    <button data-category="tea">Чай</button>
+  </div>
+
+  <section id="coffee">
+    <h2>Классика</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG" alt="Эспрессо">
+        <h3>Эспрессо</h3>
+          <span class="volume">40 мл</span>
+          
+        <p>160 ₽</p>
+      </div>
+
+      <div class="card">
+        <img src="https://www.foodandwine.com/thmb/9JyfZPcxlV9ubEeuSznhO-M4q0w=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Partners-Americano-FT-BLOG0523-b8e18cc340574cc9bed536cceeec7082.jpg" alt="Американо">
+        <h3>Американо</h3>
+          <span class="volume">200/300 мл</span>
+        
+        <p>200 ₽</p>
+      </div>
+      <div class="card">
+        <img src="https://avatars.mds.yandex.net/i?id=23516692a2e07faa3c929040a240af97_l-12896214-images-thumbs&n=13" alt="Флэт Уайт">
+        <h3>Флэт Уайт</h3>
+        <span class="volume">200 мл</span>
+        <p>220 ₽</p>
+      </div>
+      <div class="card">
+        <img src="https://avatars.mds.yandex.net/i?id=9b9aa49ed21594d6673f635d788a88a7_l-5231985-images-thumbs&n=13" alt="Капучино">
+        <h3>Капучино</h3>
+        <span class="volume">200/300/400 мл</span>
+        <p>200/230/270 ₽</p>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/originals/be/1e/f8/be1ef8eb64e5db54a86184f0c5860cca.jpg" alt="Латте">
+        <h3>Латте</h3>
+        <span class="volume">200/300/400 мл</span>
+        <p>240/280 ₽</p>
+      </div>
+      <div class="card">
+        <img src="https://avatars.mds.yandex.net/get-sprav-products/12412149/2a0000018d0c807410431d56922926dd2449/M_height" alt="Раф">
+        <h3>Раф</h3>
+        <span class="volume">300/400 мл</span>
+        <p>300/350 ₽</p>
+      </div>
+      <div class="card">
+        <img src="https://avatars.mds.yandex.net/i?id=89d9dc7977c12d6783a11a4f1bd097a5_l-5231154-images-thumbs&n=13" alt="Какао">
+        <h3>Какао</h3>
+        <span class="volume">200/300 мл</span>
+        <p>260/290 ₽</p>
+      </div>
+      <div class="card">
+        <img src="https://avatars.mds.yandex.net/i?id=ee9188c76fe9593e15fa3588fa5f65cd_l-4841475-images-thumbs&n=13" alt="Матча-латте">
+        <h3>Матча-латте</h3>
+        <span class="volume">300/400 мл</span>
+        <p>250/300 ₽</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tea">
+    <h2>Чай</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Green_tea_brewed.jpg" alt="Зелёный чай">
+        <h3>Зелёный чай</h3>
+        <p>180 ₽</p>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Black_tea_in_cup.jpg" alt="Чёрный чай">
+        <h3>Чёрный чай</h3>
+        <p>170 ₽</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="dessert">
+    <h2>Десерты</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Cheesecake_with_strawberry.jpg" alt="Чизкейк">
+        <h3>Чизкейк</h3>
+        <p>250 ₽</p>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Chocolate_muffin.jpg" alt="Маффин">
+        <h3>Маффин</h3>
+        <p>120 ₽</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const buttons = document.querySelectorAll("button");
+    const sections = document.querySelectorAll("section");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const category = button.getAttribute("data-category");
+
+        if (category === "all") {
+          sections.forEach(sec => sec.classList.add("active"));
+        } else {
+          sections.forEach(sec => sec.classList.remove("active"));
+          document.getElementById(category).classList.add("active");
+        }
+      });
+    });
+
+    // по умолчанию показываем все
+    sections.forEach(sec => sec.classList.add("active"));
+  </script>
+</body>
+</html>
