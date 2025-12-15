@@ -96,12 +96,32 @@
     }
     .card .volume {
       font-size: 11px;              /* маленький размер */
-      color: rgba(100, 100, 100, 0.5); /* серый полупрозрачный */
+      color: rgba(41, 41, 41, 0.5); /* серый полупрозрачный */
       margin-left: 2px;             /* отступ от названия */
       position: relative;
       top: -8px; /* поднимаем на 4 пикселя */
     }
     
+    /* 📱 Мобильная адаптация */
+    @media (max-width: 600px) {
+      body {
+        padding: 5px;
+      }
+      h1 {
+        font-size: 1.2rem;
+        padding: 10px;
+      }
+      button {
+        font-size: 0.9rem;
+        padding: 10px;
+      }
+      .cards {
+        grid-template-columns: 1fr; /* карточки в одну колонку */
+      }
+      .card img {
+        max-height: 180px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -110,7 +130,7 @@
   <div class="buttons">
     <button data-category="all">Все</button>
     <button data-category="coffee">Классические</button>
-    <button data-category="original ">Кофе авторские</button>
+    <button data-category="original">Кофе авторские</button>
     <button data-category="cold">Холодные</button>
     <button data-category="milky">Молочные коктейли</button>
     <button data-category="tea">Чай</button>
@@ -173,37 +193,157 @@
     </div>
   </section>
 
-  <section id="tea">
-    <h2>Чай</h2>
+  <section id="original">
+    <h2>Авторский кофе</h2>
     <div class="cards">
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Green_tea_brewed.jpg" alt="Зелёный чай">
-        <h3>Зелёный чай</h3>
-        <p>180 ₽</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Green_tea_brewed.jpg" alt="Фисташка-ваниль">
+        <h3>Фисташка-ваниль</h3>
+        <span class="volume">300/400 мл</span>
+        <p>260/320 ₽</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Black_tea_in_cup.jpg" alt="Чёрный чай">
-        <h3>Чёрный чай</h3>
-        <p>170 ₽</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Black_tea_in_cup.jpg" alt="Сырный крекер">
+        <h3>Сырный крекер</h3>
+        <span class="volume">300/400 мл</span>
+        <p>260/320 ₽</p>
+      </div>
+
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Green_tea_brewed.jpg" alt="Балерина-капучино">
+        <h3>Балерина-капучино</h3>
+        <span class="volume">300/400 мл</span>
+        <p>300/350 ₽</p>
+      </div>
+
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Green_tea_brewed.jpg" alt="Раф Сгущенка">
+        <h3>Раф Сгущенка</h3>
+        <span class="volume">300 мл</span>
+        <p>300 ₽</p>
+      </div>
+
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Green_tea_brewed.jpg" alt="Раф Нутелла">
+        <h3>Раф Нутелла</h3>
+        <span class="volume">300 мл</span>
+        <p>330 ₽</p>
       </div>
     </div>
   </section>
 
-  <section id="dessert">
-    <h2>Десерты</h2>
+
+  <section id="cold">
+    <h2>Холодные напитки</h2>
     <div class="cards">
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Cheesecake_with_strawberry.jpg" alt="Чизкейк">
-        <h3>Чизкейк</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Green_tea_brewed.jpg" alt="Эспрессо тоник">
+        <h3>Эспрессо тоник</h3>
+        <span class="volume">400 мл</span>
         <p>250 ₽</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Chocolate_muffin.jpg" alt="Маффин">
-        <h3>Маффин</h3>
-        <p>120 ₽</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Black_tea_in_cup.jpg" alt="Матча тоник">
+        <h3>Матча тоник</h3>
+        <span class="volume">400 мл</span>
+        <p>280 ₽</p>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Black_tea_in_cup.jpg" alt="Бамбл">
+        <h3>Бамбл</h3>
+        <span class="volume">400 мл</span>
+        <p>280 ₽</p>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Black_tea_in_cup.jpg" alt="Айс-латте">
+        <h3>Айс-латте</h3>
+        <span class="volume">300/400 мл</span>
+        <p>250/280 ₽</p>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Black_tea_in_cup.jpg" alt="Лимонад Манго-маракуйя">
+        <h3>Лимонад Манго-маракуйя</h3>
+        <span class="volume">300/400 мл</span>
+        <p>270/330 ₽</p>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Black_tea_in_cup.jpg" alt="Лимонад Классический">
+        <h3>Лимонад Классический</h3>
+        <span class="volume">300/400 мл</span>
+        <p>250/300 ₽</p>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Black_tea_in_cup.jpg" alt="Лимонад Арбуз-дыня">
+        <h3>Лимонад Арбуз-дыня</h3>
+        <span class="volume">300/400 мл</span>
+        <p>270/330 ₽</p>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Black_tea_in_cup.jpg" alt="Лимонад Ананас-грейпфрут">
+        <h3>Лимонад Ананас-грейпфрут</h3>
+        <span class="volume">300/400 мл</span>
+        <p>270/330 ₽</p>
       </div>
     </div>
   </section>
+
+  <section id="milky">
+    <h2>Молочные коктейли</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Cheesecake_with_strawberry.jpg" alt="Классический">
+        <h3>Классический</h3>
+        <span class="volume">300/400 мл</span>
+        <p>300/350 ₽</p>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Chocolate_muffin.jpg" alt="Нутелла">
+        <h3>Нутелла</h3>
+        <span class="volume">300/400 мл</span>
+        <p>330/400 ₽</p>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Chocolate_muffin.jpg" alt="Фисташковый">
+        <h3>Фисташковый</h3>
+        <span class="volume">300/400 мл</span>
+        <p>330/400 ₽</p>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Chocolate_muffin.jpg" alt="Ягодный">
+        <h3>Ягодный</h3>
+        <span class="volume">300/400 мл</span>
+        <p>330/400 ₽</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tea">
+    <h2>Чаи</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Cheesecake_with_strawberry.jpg" alt="Черный">
+        <h3>Черный чай</h3>
+        <span class="volume">400 мл</span>
+        <p>200 ₽</p>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Cheesecake_with_strawberry.jpg" alt="Зеленый">
+        <h3>Зеленый чай</h3>
+        <span class="volume">400 мл</span>
+        <p>200 ₽</p>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Cheesecake_with_strawberry.jpg" alt="Травяной">
+        <h3>Травяной чай</h3>
+        <span class="volume">400 мл</span>
+        <p>200 ₽</p>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Cheesecake_with_strawberry.jpg" alt="Фруктовый">
+        <h3>Фруктовый чай</h3>
+        <span class="volume">400 мл</span>
+        <p>200 ₽</p>
+      </div>
 
   <script>
     const buttons = document.querySelectorAll("button");
