@@ -24,7 +24,7 @@
     .container {
       display: flex;
       flex-wrap: wrap;        /* карточки переносятся */
-      justify-content: center; /* центрируем по горизонтали */
+      justify-content: flex-start; /* выравниваем по левому краю */
       gap: 20px;              /* расстояние между карточками */
       max-width: 1200px;
       margin: 0 auto;
@@ -74,7 +74,7 @@
       background: #fff;
       flex: 1 1 250px;        /* адаптивная ширина */
       max-width: 300px;       /* ограничение ширины */
-      margin: 0 auto;         /* центрируем */
+   
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
       width: 200px;
@@ -122,11 +122,12 @@
         padding: 5px;
       }
       .card {
-        width: 90%;             /* почти на всю ширину экрана */
+        width: 100%;             /* почти на всю ширину экрана */
         max-width: none;
       }
       .container {
-        flex-direction: column; /* карточки идут столбиком */
+        flex-direction: column;   /* карточки идут столбиком */
+        align-items: flex-start;  /* прижимаем к левому краю */
         
       }
       h1 {
