@@ -4,13 +4,15 @@
   <meta charset="UTF-8">
   <title>Меню кофейни</title>
   <style>
-    body {
+    html, body {
       font-family: 'Georgia', serif;
-      background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') no-repeat center center fixed;
+      background: url('https://i.pinimg.com/736x/93/b6/95/93b6951ebd2f44518ff57c0158aea63f.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #333;
+      box-sizing: border-box;
       margin: 0;
-      padding: 20px;
+      padding: 0px;
+      overflow-x: hidden; /* убирает горизонтальный скролл */
     }
     h1 {
       text-align: center;
@@ -18,6 +20,15 @@
       background-color: rgba(165, 42, 42, 0.8);
       padding: 15px;
       border-radius: 8px;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;        /* карточки переносятся */
+      justify-content: center; /* центрируем по горизонтали */
+      gap: 20px;              /* расстояние между карточками */
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
     }
     .buttons {
       text-align: center;
@@ -61,6 +72,9 @@
     }
     .card {
       background: #fff;
+      flex: 1 1 250px;        /* адаптивная ширина */
+      max-width: 300px;       /* ограничение ширины */
+      margin: 0 auto;         /* центрируем */
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
       width: 200px;
@@ -106,6 +120,14 @@
     @media (max-width: 600px) {
       body {
         padding: 5px;
+      }
+      .card {
+        width: 90%;             /* почти на всю ширину экрана */
+        max-width: none;
+      }
+      .container {
+        flex-direction: column; /* карточки идут столбиком */
+        align-items: center;    /* центрируем */
       }
       h1 {
         font-size: 1.2rem;
