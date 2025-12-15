@@ -6,7 +6,7 @@
   <style>
     body {
       font-family: 'Georgia', serif;
-      background: url('https://i.pinimg.com/736x/93/b6/95/93b6951ebd2f44518ff57c0158aea63f.jpg') no-repeat center center fixed;
+      background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') no-repeat center center fixed;
       background-size: cover;
       color: #333;
       margin: 0;
@@ -122,6 +122,18 @@
         max-height: 180px;
       }
     }
+    section {
+      display: none; /* скрываем */
+      margin-top: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+section.active {
+  display: block; /* показываем только активную */
+}
+
   </style>
 </head>
 <body>
@@ -197,34 +209,34 @@
     <h2>Авторский кофе</h2>
     <div class="cards">
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Green_tea_brewed.jpg" alt="Фисташка-ваниль">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/12164584/img_53af59edf77a11eeb14a8a54364f94d5/orig" alt="Фисташка-ваниль">
         <h3>Фисташка-ваниль</h3>
         <span class="volume">300/400 мл</span>
         <p>260/320 ₽</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Black_tea_in_cup.jpg" alt="Сырный крекер">
+        <img src="https://masterpiecer-images.s3.yandex.net/ad6e4ca7741611ee98154659bdca6a39:upscaled" alt="Сырный крекер">
         <h3>Сырный крекер</h3>
         <span class="volume">300/400 мл</span>
         <p>260/320 ₽</p>
       </div>
 
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Green_tea_brewed.jpg" alt="Балерина-капучино">
+        <img src="https://i.pinimg.com/736x/25/99/c3/2599c37fb3d3b0f793e8de3dc6f53ea7.jpg" alt="Балерина-капучино">
         <h3>Балерина-капучино</h3>
         <span class="volume">300/400 мл</span>
         <p>300/350 ₽</p>
       </div>
 
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Green_tea_brewed.jpg" alt="Раф Сгущенка">
+        <img src="https://avatars.mds.yandex.net/get-sprav-products/9240521/2a00000189ad9ab9a85b586cdad691ad8c1a/XXL" alt="Раф Сгущенка">
         <h3>Раф Сгущенка</h3>
         <span class="volume">300 мл</span>
         <p>300 ₽</p>
       </div>
 
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Green_tea_brewed.jpg" alt="Раф Нутелла">
+        <img src="https://foodmood.ru/upload/iblock/ac7/ac7ce542f38e06eafda94647dc47d642.jpeg" alt="Раф Нутелла">
         <h3>Раф Нутелла</h3>
         <span class="volume">300 мл</span>
         <p>330 ₽</p>
@@ -237,49 +249,49 @@
     <h2>Холодные напитки</h2>
     <div class="cards">
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Green_tea_brewed.jpg" alt="Эспрессо тоник">
+        <img src="https://avatars.mds.yandex.net/get-sprav-products/9854027/2a00000189afc518f0cc721d37ea75e52fbf/XXL" alt="Эспрессо тоник">
         <h3>Эспрессо тоник</h3>
         <span class="volume">400 мл</span>
         <p>250 ₽</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Black_tea_in_cup.jpg" alt="Матча тоник">
+        <img src="https://avatars.mds.yandex.net/i?id=32e94f627662954de7dc2de3b218f758_l-4156995-images-thumbs&n=13" alt="Матча тоник">
         <h3>Матча тоник</h3>
         <span class="volume">400 мл</span>
         <p>280 ₽</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Black_tea_in_cup.jpg" alt="Бамбл">
+        <img src="https://avatars.mds.yandex.net/i?id=5861578469dff038431eb90c15d9c10c_l-4955284-images-thumbs&n=13" alt="Бамбл">
         <h3>Бамбл</h3>
         <span class="volume">400 мл</span>
         <p>280 ₽</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Black_tea_in_cup.jpg" alt="Айс-латте">
+        <img src="https://avatars.mds.yandex.net/i?id=6a18f01b8c8431782aff2c21a5c88127_l-3643797-images-thumbs&n=13" alt="Айс-латте">
         <h3>Айс-латте</h3>
         <span class="volume">300/400 мл</span>
         <p>250/280 ₽</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Black_tea_in_cup.jpg" alt="Лимонад Манго-маракуйя">
+        <img src="https://static.tildacdn.com/tild6336-6333-4537-b630-353937666661/_-.jpg" alt="Лимонад Манго-маракуйя">
         <h3>Лимонад Манго-маракуйя</h3>
         <span class="volume">300/400 мл</span>
         <p>270/330 ₽</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Black_tea_in_cup.jpg" alt="Лимонад Классический">
+        <img src="https://img.povar.ru/main-micro/5f/0c/57/05/klassicheskii_limonad-850059.jpg" alt="Лимонад Классический">
         <h3>Лимонад Классический</h3>
         <span class="volume">300/400 мл</span>
         <p>250/300 ₽</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Black_tea_in_cup.jpg" alt="Лимонад Арбуз-дыня">
+        <img src="https://i.pinimg.com/736x/c2/7c/ff/c27cff507459f69025f55f4c9e22a168.jpg" alt="Лимонад Арбуз-дыня">
         <h3>Лимонад Арбуз-дыня</h3>
         <span class="volume">300/400 мл</span>
         <p>270/330 ₽</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Black_tea_in_cup.jpg" alt="Лимонад Ананас-грейпфрут">
+        <img src="https://scdn.chibbis.ru/live/products/90ddbfd675a3c4a76e6cc4e98ca01e51.webp" alt="Лимонад Ананас-грейпфрут">
         <h3>Лимонад Ананас-грейпфрут</h3>
         <span class="volume">300/400 мл</span>
         <p>270/330 ₽</p>
@@ -291,25 +303,25 @@
     <h2>Молочные коктейли</h2>
     <div class="cards">
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Cheesecake_with_strawberry.jpg" alt="Классический">
+        <img src="https://www.osteria.ru/upload/resize_cache/webp/iblock/161/fudabq59ui5bz1ds8jqhfvu5avesp2h9/DSC01042.webp" alt="Классический">
         <h3>Классический</h3>
         <span class="volume">300/400 мл</span>
         <p>300/350 ₽</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Chocolate_muffin.jpg" alt="Нутелла">
+        <img src="https://барпервый.рф/wp-content/uploads/2022/12/bez-imeni-1000-1536x864.jpg" alt="Нутелла">
         <h3>Нутелла</h3>
         <span class="volume">300/400 мл</span>
         <p>330/400 ₽</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Chocolate_muffin.jpg" alt="Фисташковый">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/14348358/img_13c62085938d11efbc884240ad7ee7ec/orig" alt="Фисташковый">
         <h3>Фисташковый</h3>
         <span class="volume">300/400 мл</span>
         <p>330/400 ₽</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Chocolate_muffin.jpg" alt="Ягодный">
+        <img src="https://valfruttaweb.blob.core.windows.net/files/immagini/immagini-blog/come-fare-frappe/come-fare-frappe-2.jpg" alt="Ягодный">
         <h3>Ягодный</h3>
         <span class="volume">300/400 мл</span>
         <p>330/400 ₽</p>
@@ -321,25 +333,25 @@
     <h2>Чаи</h2>
     <div class="cards">
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Cheesecake_with_strawberry.jpg" alt="Черный">
+        <img src="https://st.overclockers.ru/legacy/blog/415476/476746_O.jpg" alt="Черный">
         <h3>Черный чай</h3>
         <span class="volume">400 мл</span>
         <p>200 ₽</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Cheesecake_with_strawberry.jpg" alt="Зеленый">
+        <img src="https://avatars.mds.yandex.net/i?id=9b08043018963149d4b1cc86b04a02096039df14-5236780-images-thumbs&n=13" alt="Зеленый">
         <h3>Зеленый чай</h3>
         <span class="volume">400 мл</span>
         <p>200 ₽</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Cheesecake_with_strawberry.jpg" alt="Травяной">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/14849077/img_af97d5f2c2c411ef8bf37a1fca1a5260/orig" alt="Травяной">
         <h3>Травяной чай</h3>
         <span class="volume">400 мл</span>
         <p>200 ₽</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Cheesecake_with_strawberry.jpg" alt="Фруктовый">
+        <img src="https://static.srpcdigital.com/styles/1200x600/public/2024-05/661830.jpeg.webp" alt="Фруктовый">
         <h3>Фруктовый чай</h3>
         <span class="volume">400 мл</span>
         <p>200 ₽</p>
@@ -351,7 +363,7 @@
 
     buttons.forEach(button => {
       button.addEventListener("click", () => {
-        const category = button.getAttribute("data-category");
+        const category = button.getAttribute("data-category").trim();
 
         if (category === "all") {
           sections.forEach(sec => sec.classList.add("active"));
